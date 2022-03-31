@@ -1,0 +1,21 @@
+.outer{
+    display: inline-block;
+    width: 100%;
+}
+
+.outer .main{
+    padding: 20px;
+}
+.outer .main .firstPart{
+    width: 59%;
+    display: inline-block;
+}
+
+.outer .main .secondPart{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+body{
+    font-family: sans-serif;
+}

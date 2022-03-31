@@ -1,0 +1,27 @@
+
+<section class="modal-outer" style="position: relative;">
+    <div id="popup1" class="overlay overlaytarget" [style.display] = "message == '' ? 'none' : 'block'" >
+        <div class="popup">
+            <a class="close" (click)="closePopup()" href="javascript:void(0);">&times;</a>
+            <div class="content">
+                <img src="{{message.Image}}" alt="">
+                <div class="action">
+                    <span>
+                        {{message.likes}} Likes
+                        
+                    </span>
+                    <span>
+                       {{message.timestamp}}
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <button class="likeBtn" id="likeDislike" (click)="like()">{{btnName}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <a class="button" href="#popup1">Let me Pop up</a> -->
+
+

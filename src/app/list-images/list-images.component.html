@@ -1,0 +1,24 @@
+<section class="outerSection">
+    <!-- <button class="" (click)="sortbyLikes()">Sort By Likes - asending</button> -->
+    <p>Sort By Likes</p>
+    <input type="radio" id="low" name="like" value="low" (change)="changeSort($event)"> &nbsp;
+     
+     <label for="low">Low To High</label>  &nbsp;
+     <input type="radio" id="high" name="like" value="high" (change)="changeSort($event)"> &nbsp;
+           <label for="high">High To Low</label><br>
+    <div class="imageOuter">
+        <div class="imageCard" *ngFor="let data of urldata; let i = index">
+            <div class="imagediv" style="background-image: url({{data.Image}});" (click)="newMessage(data)">
+                <div (click)="myFunction(i)" id="myButton{{i}}" class="heart"></div>
+            </div>
+            <div class="action">
+                <span>
+                    {{data.likes}} Likes
+                </span>
+                <span>
+                   {{data.timestamp}}
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
